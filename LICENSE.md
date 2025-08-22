@@ -30,4 +30,4 @@ The Licensed Work is provided “as-is” without warranty of any kind. The Lice
 ---
 
 For inquiries about commercial licensing, please contact:  
-**AILAND Group** — info@ailand.group
+**Andrew Kobal** — kobalandreas@gmail.com
