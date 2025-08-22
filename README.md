@@ -1,4 +1,4 @@
-# Quantum EVM
+# QProofEVM
 
 **EVM-compatible blockchain consensus Proof-of-Coherence with physically verifiable quantum randomness**
 
@@ -7,13 +7,13 @@
 
 ## **Executive Summary**
 
-This document describes **Quantum EVM** — a decentralized L2 network for Ethereum, designed to solve the fundamental problem of the absence of true randomness in blockchain. Modern blockchains rely on pseudo-random generators, which creates predictability and vulnerabilities in critical operations: fair lotteries, fair auctions, protection from MEV attacks, and prevention of oracle manipulations.
+This document describes **QProofEVM** — a decentralized L2 network for Ethereum, designed to solve the fundamental problem of the absence of true randomness in blockchain. Modern blockchains rely on pseudo-random generators, which creates predictability and vulnerabilities in critical operations: fair lotteries, fair auctions, protection from MEV attacks, and prevention of oracle manipulations.
 
-**Quantum EVM** solves this problem through a new consensus mechanism **Coherence Consensus**, which integrates verified data from physical quantum random number generators (QRNG) directly into the block creation process. The key element of the system is the **Verifier Function** — a deterministic set of statistical tests created based on deep AI analysis of quantum data during the R&D phase. This function can distinguish true quantum data from pseudo-random data by physical markers: quantum correlations, specific noise patterns, and temporal characteristics that cannot be simulated programmatically.
+**QProofEVM** solves this problem through a new consensus mechanism **Coherence Consensus**, which integrates verified data from physical quantum random number generators (QRNG) directly into the block creation process. The key element of the system is the **Verifier Function** — a deterministic set of statistical tests created based on deep AI analysis of quantum data during the R&D phase. This function can distinguish true quantum data from pseudo-random data by physical markers: quantum correlations, specific noise patterns, and temporal characteristics that cannot be simulated programmatically.
 
 The protocol uses **Miners Committee**: every 2 seconds, 5 miners are randomly selected who collectively generate quantum data through their QRNG, combine them with XOR operation, and verify the result with the Verifier Function. A block is considered valid with participation of ≥3 miners and exceeding the coherence threshold. This approach ensures fault tolerance (works with 40% offline miners) and protection from attacks (requires compromising 3+ miners simultaneously).
 
-The system is built on **modular L2/L3 architecture** based on OP Stack: L1 Ethereum provides final security, L2 Quantum EVM provides verified quantum randomness through specialized opcodes (`GET_QUANTUM_DATA`, `QUANTUM_FAIR_SELECT`, `QUANTUM_COMMIT_REVEAL`), and L3 Appchains ensure maximum speed of dApp execution. This allows developers to integrate quantum randomness into existing EVM-compatible contracts with minimal changes, solving practical DeFi problems: eliminating front-running, fair liquidations, protected oracles, and fair resource distribution.
+The system is built on **modular L2/L3 architecture** based on OP Stack: L1 Ethereum provides final security, L2 QProofEVM provides verified quantum randomness through specialized opcodes (`GET_QUANTUM_DATA`, `QUANTUM_FAIR_SELECT`, `QUANTUM_COMMIT_REVEAL`), and L3 Appchains ensure maximum speed of dApp execution. This allows developers to integrate quantum randomness into existing EVM-compatible contracts with minimal changes, solving practical DeFi problems: eliminating front-running, fair liquidations, protected oracles, and fair resource distribution.
 
 ---
 
@@ -22,7 +22,7 @@ The system is built on **modular L2/L3 architecture** based on OP Stack: L1 Ethe
 1. [Part 1: Foundation — From AI Analysis to Simple Verification](#part-1-foundation--from-ai-analysis-to-simple-verification)
 2. [Part 2: Protocol — Coherence Consensus and Mining](#part-2-protocol--coherence-consensus-and-mining)
 3. [Part 3: Economics — Tokenomics](#part-3-economics--tokenomics)
-4. [Part 4: Product — Quantum EVM](#part-4-product--quantum-evm)
+4. [Part 4: Product — QProofEVM](#part-4-product--quantum-evm)
 5. [Conclusion](#conclusion)
 6. [References](#references)
 
@@ -196,7 +196,7 @@ graph TD
 
 ### **2.1. Abstract**
 
-**Quantum EVM** — is a decentralized cryptographic system using the **Coherence Consensus** consensus algorithm.
+**QProofEVM** — is a decentralized cryptographic system using the **Coherence Consensus** consensus algorithm.
 
 **Connection between R&D and production:**
 
@@ -308,7 +308,7 @@ flowchart TD
 - **Consensus:** Block is valid with participation of ≥3 miners from the committee
 - **Security:** Attacker needs to control 3+ miners simultaneously
 
-### **2.4. Mining in the Quantum EVM ecosystem (Miners Committee)**
+### **2.4. Mining in the QProofEVM ecosystem (Miners Committee)**
 
 - **Basic concepts:**
   - **Committee:** Group of 5 randomly selected miners to create a block.
@@ -373,7 +373,7 @@ flowchart TD
 
 **Comparison with traditional mining:**
 
-| Parameter             | Bitcoin ASIC | Quantum EVM QRNG |
+| Parameter             | Bitcoin ASIC | QProofEVM QRNG |
 | --------------------- | ------------ | ---------------- |
 | Entry cost            | $10K-$100K+  | $1K-$3K          |
 | Energy consumption    | 3000W+       | Low              |
@@ -382,11 +382,11 @@ flowchart TD
 
 ---
 
-## **Part 4: Product — Quantum EVM**
+## **Part 4: Product — QProofEVM**
 
 ### **4.1. Architecture: Modular L2/L3 approach based on OP Stack**
 
-Quantum EVM is implemented as a **modular three-tier system** based on Ethereum and the **OP Stack** framework.
+QProofEVM is implemented as a **modular three-tier system** based on Ethereum and the **OP Stack** framework.
 
 ```mermaid
 graph TB
@@ -394,8 +394,8 @@ graph TB
         ETH["Ethereum Mainnet<br/>• Final security<br/>• Proof publication"]
     end
 
-    subgraph L2 ["⚡ Level 2: Quantum EVM (L2)"]
-        QEVM["Quantum EVM<br/>• Coherence Consensus<br/>• QRNG miners<br/>• Verifier function"]
+    subgraph L2 ["⚡ Level 2: QProofEVM (L2)"]
+        QEVM["QProofEVM<br/>• Coherence Consensus<br/>• QRNG miners<br/>• Verifier function"]
         OPCODES["Quantum Opcodes<br/>• GET_QUANTUM_DATA<br/>• QUANTUM_FAIR_SELECT<br/>• QUANTUM_COMMIT_REVEAL"]
     end
 
@@ -427,7 +427,7 @@ graph TB
 - **Role:** Final settlement and security layer.
 - **Rationale:** We "rent" security from Ethereum. Any attack on our ecosystem would require attacking all of Ethereum, making it economically unfeasible.
 
-### **4.1.2. Level 2: Unique functionality layer — Quantum EVM (L2)**
+### **4.1.2. Level 2: Unique functionality layer — QProofEVM (L2)**
 
 - **Role:** Specialized rollup providing verified quantum randomness.
 
@@ -507,7 +507,7 @@ Several functions are added to the instruction set (opcode) on L2 and L3:
 
 ## **Conclusion**
 
-The presented modular architecture of Quantum EVM, based on a simple and transparent verifier, solves the problem of lack of verifiable randomness in blockchain. Using Ethereum's security, unique Coherence Consensus on L2, and scalable L3 appchains, the system offers a balanced solution to the blockchain trilemma. The next stage is implementing MVP to calibrate the protocol's economic parameters and demonstrate its practical value.
+The presented modular architecture of QProofEVM, based on a simple and transparent verifier, solves the problem of lack of verifiable randomness in blockchain. Using Ethereum's security, unique Coherence Consensus on L2, and scalable L3 appchains, the system offers a balanced solution to the blockchain trilemma. The next stage is implementing MVP to calibrate the protocol's economic parameters and demonstrate its practical value.
 
 ## **Public Statement**
 
