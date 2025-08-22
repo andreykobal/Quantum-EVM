@@ -1,7 +1,7 @@
 # Business Source License 1.1
 
 Licensor: Andrew Kobal & Valentin Sotov (AILAND Group)  
-Licensed Work: Quantum EVM — EVM-compatible blockchain consensus Proof-of-Coherence with physically verifiable quantum randomness  
+Licensed Work: QProofEVM — EVM-compatible blockchain consensus Proof-of-Coherence with physically verifiable quantum randomness  
 Change Date: 2025-08-22 → 2030-08-22  
 Change License: GNU General Public License v3.0 or later (GPLv3+)
 
