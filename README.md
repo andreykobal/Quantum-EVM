@@ -519,7 +519,12 @@ The purpose of this disclosure is to make the idea public so that it remains par
 
 ## **License**
 
-This project is released under the MIT license. See [LICENSE.md](LICENSE.md).
+This project is released under the **Business Source License 1.1 (BSL)**.  
+- Free for research and non-commercial use.  
+- Commercial use (including launching networks or tokens) requires a commercial license from the authors.  
+- On **August 22, 2030**, the license will automatically convert to **GPLv3+**.  
+
+See [LICENSE.md](LICENSE.md) for full terms.
 
 ## **References**
 
